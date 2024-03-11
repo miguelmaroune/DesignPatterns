@@ -48,16 +48,16 @@ class Point
         return new Point(x,y);
     }
 
-    public static Point newPolarPoint(double rho, double theta)
-    {
-        return new Point(rho*Math.cos(theta), rho*Math.sin(theta));
-    }
-
+    //creating a nested class inside the Point class in order to acces the point constructor and keeping it private
     public static class Factory
     {
         public static Point newCartesianPoint(double x, double y)
         {
             return new Point(x,y);
+        }
+        public static Point newPolarPoint(double rho, double theta)
+        {
+            return new Point(rho*Math.cos(theta), rho*Math.sin(theta));
         }
     }
 }
