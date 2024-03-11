@@ -1,0 +1,6 @@
+The Builder design pattern is a creational design pattern used to construct complex objects step by step.
+It separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
+This pattern involves a director class, a builder interface, and concrete builder classes.
+The director class controls the construction process by invoking methods on the builder interface,
+ while concrete builder classes implement these methods to construct specific parts of the object.
+Finally, a client class uses the director to create the object using the builder, resulting in a flexible and intuitive way to construct complex objects.
