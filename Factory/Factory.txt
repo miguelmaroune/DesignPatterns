@@ -1,0 +1,10 @@
+The factory design pattern is useful in scenarios where object creation is complex,
+ and the client code should be decoupled from the creation process.
+It provides a way to encapsulate the instantiation logic and allows the client code to use the factory to create objects without knowing the exact type
+or details of the object creation process. This promotes code reusability, maintainability, and flexibility in handling object creation. Additionally,
+if the object creation logic changes in the future, only the factory needs to be modified, keeping the client code unchanged.
+
+
+
+
+
