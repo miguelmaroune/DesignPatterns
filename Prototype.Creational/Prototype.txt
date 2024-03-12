@@ -1,0 +1,11 @@
+The Prototype Design Pattern in Java is a creational design pattern that allows you to create new objects by copying an existing object,
+known as the prototype, instead of creating new instances from scratch.
+This pattern is useful when the construction of a new object is more efficient by copying an existing one,
+especially when the instantiation process is costly or complex.
+
+// prototype ye3neh beje ba3mel clone la object already mawjoud masalan Command 3nda 90% nafs l osas beje ba3mela clone w bghayer bas l badde yeh.
+
+Check Payment example : PaymentMethod is an interface that declares a clone() method to clone payment methods and a pay(double amount) method to perform payments.
+                        CreditCard and PayPal are concrete implementations of the PaymentMethod interface. They provide their own implementations of the clone() method to clone themselves and the pay(double amount) method to perform payments.
+                        PaymentApplication is the client class responsible for creating payment methods. It initializes with prototypes of different payment methods and provides a method createPaymentMethod(String method) to create payment method instances based on the prototype chosen.
+                        In the main() method, prototypes for Credit Card and PayPal are created, and then the Payment Application is initialized with these prototypes. Payment methods are created by cloning these prototypes and then used to perform payments.

@@ -1,0 +1,93 @@
+// Prototype interface
+interface PaymentMethod extends Cloneable {
+    PaymentMethod clone();
+    void pay(double amount);
+}
+
+// Concrete prototypes
+class CreditCard implements PaymentMethod {
+    private String cardNumber;
+    private String expiryDate;
+
+    public CreditCard(String cardNumber, String expiryDate) {
+        this.cardNumber = cardNumber;
+        this.expiryDate = expiryDate;
+    }
+
+    @Override
+    public CreditCard clone() {
+        try {
+            return (CreditCard) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return null; // Handle clone failure
+        }
+    }
+
+    @Override
+    public void pay(double amount) {
+        System.out.println("Paid $" + amount + " using Credit Card ending with " + cardNumber.substring(cardNumber.length() - 4));
+    }
+}
+
+class PayPal implements PaymentMethod {
+    private String email;
+
+    public PayPal(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public PayPal clone() {
+        try {
+            return (PayPal) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return null; // Handle clone failure
+        }
+    }
+
+    @Override
+    public void pay(double amount) {
+        System.out.println("Paid $" + amount + " using PayPal linked to " + email);
+    }
+}
+
+// Client class
+public class PaymentApplication {
+    private PaymentMethod creditCardPrototype;
+    private PaymentMethod payPalPrototype;
+
+    public PaymentApplication(PaymentMethod creditCardPrototype, PaymentMethod payPalPrototype) {
+        this.creditCardPrototype = creditCardPrototype;
+        this.payPalPrototype = payPalPrototype;
+    }
+
+    public PaymentMethod createPaymentMethod(String method) {
+        if (method.equalsIgnoreCase("credit_card")) {
+            return creditCardPrototype.clone();
+        } else if (method.equalsIgnoreCase("paypal")) {
+            return payPalPrototype.clone();
+        }
+        return null;
+    }
+
+    public static void main(String[] args) {
+        // Create prototypes
+        CreditCard creditCardPrototype = new CreditCard("1234 5678 9012 3456", "12/25");
+        PayPal payPalPrototype = new PayPal("example@example.com");
+
+        // Initialize application with prototypes
+        PaymentApplication app = new PaymentApplication(creditCardPrototype, payPalPrototype);
+
+        // Create payment methods
+        PaymentMethod paymentMethod1 = app.createPaymentMethod("credit_card");
+        PaymentMethod paymentMethod2 = app.createPaymentMethod("paypal");
+
+        // Perform payments
+        if (paymentMethod1 != null) {
+            paymentMethod1.pay(100);
+        }
+        if (paymentMethod2 != null) {
+            paymentMethod2.pay(50);
+        }
+    }
+}

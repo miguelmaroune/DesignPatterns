@@ -25,13 +25,14 @@ public class Person implements Cloneable{
     @Override
     public Object clone() throws CloneNotSupportedException
     {
-        return new Person(
-                // clone() creates a shallow copy!
-                /*names */ names.clone(),
-
-                // fixes address but not names
-                /*address */ // (Address) address.clone()
-                address instanceof Cloneable ? (Address) address.clone() : address
-        );
+//        return new Person(
+//                // clone() creates a shallow copy!
+////                /*names */ names.clone(),
+//
+//                // fixes address but not names
+//                /*address */ // (Address) address.clone()
+////                address instanceof Cloneable ? (Address) address.clone() : address
+//        );
+        return null;
     }
 }

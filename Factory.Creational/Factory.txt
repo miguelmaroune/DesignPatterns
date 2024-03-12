@@ -4,5 +4,7 @@ It provides a way to encapsulate the instantiation logic and allows the client c
 or details of the object creation process. This promotes code reusability, maintainability, and flexibility in handling object creation. Additionally,
 if the object creation logic changes in the future, only the factory needs to be modified, keeping the client code unchanged.
 
-
+//Masalan eza 3ndeh kaza no3 payment  PaymentByCard  , PaymentByDelegation  , PaymentByPaypal  bekhla2 payment interface w payment factory w hayda l factory implements l payment interface
+se3eta ana bas beje :  Payment cardPayment = PaymentFactory.createPayment("card");
+                       Payment delegationPayment = PaymentFactory.createPayment("delegation");
 

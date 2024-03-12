@@ -4,3 +4,5 @@ This pattern involves a director class, a builder interface, and concrete builde
 The director class controls the construction process by invoking methods on the builder interface,
  while concrete builder classes implement these methods to construct specific parts of the object.
 Finally, a client class uses the director to create the object using the builder, resulting in a flexible and intuitive way to construct complex objects.
+//l builder bi koun 3ndo l attributes tb3 l object w function Build bt red new Phone 'eza l phone houweh l object l badde ekhla2o'
+  l setters bi redo instance of type PhoneBuilder se3eta ana beje ba3mel phoneBuilder.setx().sety().setz().build(); w hek bt reddele l instance l badde yeha

@@ -1,4 +1,0 @@
-The Prototype Design Pattern in Java is a creational design pattern that allows you to create new objects by copying an existing object,
-known as the prototype, instead of creating new instances from scratch.
-This pattern is useful when the construction of a new object is more efficient by copying an existing one,
-especially when the instantiation process is costly or complex.
