@@ -1,0 +1,6 @@
+notifies multiple objects or subscribers about any events that happen to the object they're observing.
+
+we have a publisher which in our example is the NotificationService : lets user subscribe an unsubscribe
+the subscriber is the event Listener and the concrete subscriber are the email and mobile listeners.
+
+so to sum everything up the oberser allows you to change or take action on a set of objects when and if the state of another object changes.

@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/DesignPatterns.iml" filepath="$PROJECT_DIR$/DesignPatterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/Facade.Structural/Facade.Structural.iml" filepath="$PROJECT_DIR$/Facade.Structural/Facade.Structural.iml" />
       <module fileurl="file://$PROJECT_DIR$/Factory.Creational/Factory.Creational.iml" filepath="$PROJECT_DIR$/Factory.Creational/Factory.Creational.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Observer-behavioral/Observer-behavioral.iml" filepath="$PROJECT_DIR$/Observer-behavioral/Observer-behavioral.iml" />
       <module fileurl="file://$PROJECT_DIR$/Prototype.Creational/Prototype.Creational.iml" filepath="$PROJECT_DIR$/Prototype.Creational/Prototype.Creational.iml" />
     </modules>
   </component>
