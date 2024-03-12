@@ -1,0 +1,69 @@
+// Implementor: PlatterStyle
+interface PlatterStyle {
+    void serve();
+}
+
+// Concrete Implementors: ItalianStyle and AmericanStyle
+class ItalianStyle implements PlatterStyle {
+    @Override
+    public void serve() {
+        System.out.println("Italian style");
+    }
+}
+
+class AmericanStyle implements PlatterStyle {
+    @Override
+    public void serve() {
+        System.out.println("American style");
+    }
+}
+
+// Abstraction: Platter
+abstract class Platter {
+    protected PlatterStyle style;
+
+    public Platter(PlatterStyle style) {
+        this.style = style;
+    }
+
+    abstract void serve();
+}
+
+// Refined Abstraction: Pizza and Burger
+class Pizza extends Platter {
+    public Pizza(PlatterStyle style) {
+        super(style);
+    }
+
+    @Override
+    void serve() {
+        System.out.print("Pizza ");
+        style.serve();
+    }
+}
+
+class Burger extends Platter {
+    public Burger(PlatterStyle style) {
+        super(style);
+    }
+
+    @Override
+    void serve() {
+        System.out.print("Burger ");
+        style.serve();
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        PlatterStyle italianStyle = new ItalianStyle();
+        PlatterStyle americanStyle = new AmericanStyle();
+
+        Platter italianPizza = new Pizza(italianStyle);
+        italianPizza.serve();
+
+        Platter americanBurger = new Burger(americanStyle);
+        americanBurger.serve();
+    }
+}

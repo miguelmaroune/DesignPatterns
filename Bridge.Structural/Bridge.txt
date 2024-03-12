@@ -1,0 +1,7 @@
+allows to divide and organize a single class that has multiple variants of some functionality into 2 hierarchies abstractions and implementations.
+so l abstraction hon houweh l restaurant ma3 kaza version , wl implementation houweh l Pizza ma3 l veggie , pepperonie.
+
+eza ma 3melet l bridge design ken la7 ysir fi 3ndeh :  ItalianVeggiePizza extends Pizza
+                                                    : AmericanVeggiePizza extends Pizza
+                                                    : ItalianPepperoniePizza  extends Pizza
+                                                    : AmericanPepperoniePizza  extends Pizza
