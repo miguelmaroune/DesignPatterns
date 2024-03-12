@@ -6,5 +6,3 @@ if the object creation logic changes in the future, only the factory needs to be
 
 
 
-
-
