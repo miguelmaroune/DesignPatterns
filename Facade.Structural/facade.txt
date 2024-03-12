@@ -1,0 +1,2 @@
+provides a simplified interface to a library or any other complex set of classes.
+the idea of a facade is providing a simple interface for the client.
