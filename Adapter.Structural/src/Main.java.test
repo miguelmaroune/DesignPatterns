@@ -1,0 +1,74 @@
+// Define an existing interface
+interface MediaPlayer {
+    void play(String fileName);
+}
+
+// Create a class that implements the existing interface
+class AudioPlayer implements MediaPlayer {
+    public void play(String fileName) {
+        System.out.println("Playing audio file: " + fileName);
+    }
+}
+
+// Define a new interface
+interface AdvancedMediaPlayer {
+    void playVlc(String fileName);
+    void playMp4(String fileName);
+}
+
+// Create classes that implement the new interface
+class VlcPlayer implements AdvancedMediaPlayer {
+    public void playVlc(String fileName) {
+        System.out.println("Playing vlc file: " + fileName);
+    }
+    
+    public void playMp4(String fileName) {
+        // Do nothing
+    }
+}
+
+class Mp4Player implements AdvancedMediaPlayer {
+    public void playVlc(String fileName) {
+        // Do nothing
+    }
+    
+    public void playMp4(String fileName) {
+        System.out.println("Playing mp4 file: " + fileName);
+    }
+}
+
+// Create an adapter class that implements the existing interface
+// and uses the new interface internally
+class MediaAdapter implements MediaPlayer {
+    AdvancedMediaPlayer advancedMediaPlayer;
+
+    public MediaAdapter(String audioType) {
+        if (audioType.equalsIgnoreCase("vlc")) {
+            advancedMediaPlayer = new VlcPlayer();
+        } else if (audioType.equalsIgnoreCase("mp4")) {
+            advancedMediaPlayer = new Mp4Player();
+        }
+    }
+
+    public void play(String fileName) {
+        if (fileName.endsWith(".vlc")) {
+            advancedMediaPlayer.playVlc(fileName);
+        } else if (fileName.endsWith(".mp4")) {
+            advancedMediaPlayer.playMp4(fileName);
+        }
+    }
+}
+
+// Create a client class
+public class Main {
+    public static void main(String[] args) {
+        MediaPlayer audioPlayer = new AudioPlayer();
+        audioPlayer.play("song.mp3");
+
+        MediaPlayer mediaAdapter = new MediaAdapter("vlc");
+        mediaAdapter.play("movie.vlc");
+
+        mediaAdapter = new MediaAdapter("mp4");
+        mediaAdapter.play("movie.mp4");
+    }
+}
