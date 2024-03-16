@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Adapter.Structural/Adapter.Structural.iml" filepath="$PROJECT_DIR$/Adapter.Structural/Adapter.Structural.iml" />
       <module fileurl="file://$PROJECT_DIR$/Bridge.Structural/Bridge.Structural.iml" filepath="$PROJECT_DIR$/Bridge.Structural/Bridge.Structural.iml" />
       <module fileurl="file://$PROJECT_DIR$/Builder.Creational/Builder.Creational.iml" filepath="$PROJECT_DIR$/Builder.Creational/Builder.Creational.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chain-Of-Responsibility.Behavioral/Chain-Of-Responsibility.Behavioral.iml" filepath="$PROJECT_DIR$/Chain-Of-Responsibility.Behavioral/Chain-Of-Responsibility.Behavioral.iml" />
       <module fileurl="file://$PROJECT_DIR$/DesignPatterns.iml" filepath="$PROJECT_DIR$/DesignPatterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/Facade.Structural/Facade.Structural.iml" filepath="$PROJECT_DIR$/Facade.Structural/Facade.Structural.iml" />
       <module fileurl="file://$PROJECT_DIR$/Factory.Creational/Factory.Creational.iml" filepath="$PROJECT_DIR$/Factory.Creational/Factory.Creational.iml" />
