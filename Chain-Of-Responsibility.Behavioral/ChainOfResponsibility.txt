@@ -1,2 +1,4 @@
 we use this design pattern when we encounter the need to execute several handlers in a particular order.
 the handler class metel recursion , ye3neh b alba handler object bi koun.
+each handler must make either process the request or pass it along the chain.
+the client may trigger any handler in the chain not just the first one.
